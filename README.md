@@ -17,3 +17,29 @@
     inc: () => set((state) => ({ count: state.count + 1 })),
   }));
   ```
+
+
+---
+- **Error Note**
+  발생한 오류:  
+  ```javascript
+  uncaught TypeError: Cannot use 'in' operator to search for 'getStorage' in undefined
+  ```
+  원인: persist 사용할 때 key를 명시 하지 않아 생긴 오류
+  해결: key 설정해주기
+  ```javascript
+  import { create } from "zustand";
+  import { persist } from "zustand/middleware";
+
+  export const useCounterStore = create(
+    persist(
+      (set) => ({
+        count: 1,
+        increment: () => set((state) => ({ count: state.count + 1 })),
+        reset: () => set({ count: 1 }),
+        setNeumber: (number) => set({ count: number }),
+      }),
+      { name: "counter" } // -> key 명시하기
+    )
+  );
+  ```
