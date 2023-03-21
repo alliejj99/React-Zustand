@@ -31,7 +31,7 @@ const TodoList = () => {
 
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id}>
+          <li key={todo.id === null ? 0 : todo.id}>
             <span
               className={`${
                 todo.isCompleted ? "todo_list" : "todo_list defult"
