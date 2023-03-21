@@ -1,4 +1,4 @@
-import { useCounterStore } from "../store";
+import { useCounterStore } from "../store/useCounterStore";
 
 export default function Counter() {
   const { count, increment, reset, setNeumber } = useCounterStore();
