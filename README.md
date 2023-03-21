@@ -16,9 +16,14 @@
     count: 1,
     inc: () => set((state) => ({ count: state.count + 1 })),
   }));
-  ```
-
-
+  ``` 
+--- 
+- **기능**
+  - Count: 증가하기 / 리셋하기 / 셋팅값 부르기
+  - Todo: 일정추가하기 / 완료 체크하기 / 삭제하기
+  - devTools 사용하기
+  - localStorage, sessionStorage에 데이터 저장하기 / 데이터 지우기
+  - 외부 API 불러와 출력하기 
 
 ---
 - **Error Note**
