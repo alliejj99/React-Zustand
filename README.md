@@ -1,6 +1,6 @@
 #### React Zustand Basic-App
   React로 작성한 Zustand 프레임 워크 활용 예제 입니다.  
-  [demo]https://react-zustand.vercel.app/
+  [demo](https://react-zustand.vercel.app/)
 ---
 - **Store 생성하기**  
   1. 먼저 store를 생성해서 그 안에 원하는 값과 그 값을 업데이트 해주는 함수를 넣어줍니다,
